@@ -54,3 +54,13 @@ h1{
     justify-content: center;
     text-align:center;
 }
+
+/* hover effects */
+.button:hover{
+    box-shadow: 1px 1px white;
+    background-color: rgb(202, 3, 3);
+}
+.button:active{
+    box-shadow: .5px .5px white;
+    background-color: rgb(167, 3, 3);
+}

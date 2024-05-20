@@ -4,6 +4,7 @@
 let buttons = document.querySelectorAll('.btnNum');
 let operators = document.querySelectorAll('.btnSpcl')
 let display = document.querySelector('.display')
+let dot = document.querySelector('.btnDot')
 let equal = document.querySelector('[equal]')
 let clear = document.querySelector('.AllClear')
 
@@ -25,7 +26,6 @@ for (let operator of operators) {
         if (display.innerText.includes("/")) return;
         if (display.innerText.includes("+")) return;
         if (display.innerText.includes("-")) return;
-        if (display.innerText.includes(".")) return;
         display.innerText += newValue1;
     })
 }
@@ -37,4 +37,14 @@ clear.addEventListener('click', () => { display.innerText = "" })
 equal.addEventListener('click', () => {
     calculation = eval(display.innerText)
     display.innerText = calculation
+})
+
+// dot function
+dot.addEventListener('click', () => {
+    let newValue1 = dot.innerHTML;
+    if (display.innerText.includes(".") && !display.innerText.includes('+')) return;
+    if (display.innerText.includes(".") && !display.innerText.includes('-')) return;
+    if (display.innerText.includes(".") && !display.innerText.includes('*')) return;
+    if (display.innerText.includes(".") && !display.innerText.includes('/')) return;
+    display.innerText += newValue1;
 })
