@@ -64,3 +64,10 @@ h1{
     box-shadow: .5px .5px white;
     background-color: rgb(167, 3, 3);
 }
+/* scale up */
+@media screen and (min-width: 1550px){
+    .template{
+        scale:1.4;
+        margin-top: 10%;
+    }
+}
